@@ -1,0 +1,13 @@
+:root{
+
+}
+body{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: bisque;
+    color: #333;
+}
+a:link, a:visited {
+    color: darkorange;
+    text-decoration: none;
+}
