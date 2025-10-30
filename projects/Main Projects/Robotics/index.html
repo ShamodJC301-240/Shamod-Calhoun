@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotics Journal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Brand -->
+  <header>
+    <h1>My Robotics Journal</h1>
+    <p>Documenting circuits, microcontrollers, mechanics, physics, and math</p>
+    <!-- Optional: Search bar to find past notes/projects -->
+  </header>
+
+  <!-- Navigation for sections -->
+  <nav>
+    <a href="#experiments">Experiments</a>
+    <a href="#circuits">Circuits</a>
+    <a href="#microcontrollers">Microcontrollers</a>
+    <a href="#mechanics">Mechanics</a>
+    <a href="#physics">Physics</a>
+    <a href="#math">Math</a>
+    <a href="#projects">Projects</a>
+  </nav>
+
+  <!-- Experiments Section -->
+  <section id="experiments">
+    <h2>Experiments</h2>
+    <!-- Step 1: Display list of experiments -->
+    <!-- Step 2: Each experiment card shows title, date, description, materials -->
+    <!-- Step 3: Option to mark experiment as complete or add notes -->
+    <div id="experiment-list"></div>
+    <!-- Step 4: Form to add a new experiment -->
+    <form id="add-experiment-form">
+      <input type="text" placeholder="Experiment title" required>
+      <textarea placeholder="Description"></textarea>
+      <input type="date" placeholder="Date conducted">
+      <button type="submit">Add Experiment</button>
+    </form>
+  </section>
+
+  <!-- Circuits Section -->
+  <section id="circuits">
+    <h2>Circuits</h2>
+    <!-- Step 1: Display circuit notes and diagrams -->
+    <!-- Step 2: Each circuit card shows components used, schematic image, and description -->
+    <div id="circuit-list"></div>
+    <form id="add-circuit-form">
+      <input type="text" placeholder="Circuit name" required>
+      <textarea placeholder="Components and description"></textarea>
+      <input type="file" placeholder="Upload diagram/image">
+      <button type="submit">Add Circuit</button>
+    </form>
+  </section>
+
+  <!-- Microcontrollers Section -->
+  <section id="microcontrollers">
+    <h2>Microcontrollers</h2>
+    <!-- Step 1: Track learning progress on Arduino, Raspberry Pi, ESP32, etc. -->
+    <!-- Step 2: Each card includes microcontroller type, project, notes -->
+    <div id="microcontroller-list"></div>
+    <form id="add-microcontroller-form">
+      <input type="text" placeholder="Microcontroller type" required>
+      <textarea placeholder="Project / Notes"></textarea>
+      <button type="submit">Add Entry</button>
+    </form>
+  </section>
+
+  <!-- Mechanics Section -->
+  <section id="mechanics">
+    <h2>Mechanics</h2>
+    <!-- Step 1: Record mechanical systems, link to experiments/projects -->
+    <!-- Step 2: Include diagrams, calculations, and notes -->
+    <div id="mechanics-list"></div>
+    <form id="add-mechanics-form">
+      <input type="text" placeholder="Topic / System name" required>
+      <textarea placeholder="Notes and diagrams"></textarea>
+      <button type="submit">Add Entry</button>
+    </form>
+  </section>
+
+  <!-- Physics Section -->
+  <section id="physics">
+    <h2>Physics Concepts</h2>
+    <!-- Step 1: Record physics principles applied to robotics -->
+    <!-- Step 2: Include formulas, examples, and experiments -->
+    <div id="physics-list"></div>
+    <form id="add-physics-form">
+      <input type="text" placeholder="Concept name" required>
+      <textarea placeholder="Notes, formulas, applications"></textarea>
+      <button type="submit">Add Entry</button>
+    </form>
+  </section>
+
+  <!-- Math Section -->
+  <section id="math">
+    <h2>Math Applied to Robotics</h2>
+    <!-- Step 1: Track math problems, equations, and solutions -->
+    <!-- Step 2: Each entry includes topic, problem, solution, notes -->
+    <div id="math-list"></div>
+    <form id="add-math-form">
+      <input type="text" placeholder="Topic" required>
+      <textarea placeholder="Problem and solution"></textarea>
+      <button type="submit">Add Entry</button>
+    </form>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <!-- Step 1: List all robotics projects -->
+    <!-- Step 2: Each project card includes title, description, components, photos -->
+    <div id="projects-list"></div>
+    <form id="add-project-form">
+      <input type="text" placeholder="Project title" required>
+      <textarea placeholder="Description and notes"></textarea>
+      <input type="file" placeholder="Upload images">
+      <button type="submit">Add Project</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Robotics Journal. All rights reserved.</p>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+  <!-- Step 1: script.js will handle dynamic rendering of notes, experiments, and projects -->
+  <!-- Step 2: Add localStorage or backend persistence -->
+</body>
+</html>

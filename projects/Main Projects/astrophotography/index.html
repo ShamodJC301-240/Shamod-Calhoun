@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astrophotography Journal</title>
+
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Meta Description -->
+  <meta name="description" content="Track your night sky photos, log telescope observations, and explore celestial data.">
+</head>
+
+<body>
+  <!-- ===============================
+       HEADER / NAVIGATION
+  ================================== -->
+  <header>
+    <h1>Astrophotography Journal</h1>
+    <nav>
+      <ul>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#logbook">Observation Log</a></li>
+        <li><a href="#gear">My Gear</a></li>
+        <li><a href="#resources">Resources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===============================
+       HERO SECTION
+  ================================== -->
+  <section id="hero">
+    <h2>Capture the Cosmos</h2>
+    <p>Document your journey through the night sky and beyond.</p>
+    <button id="uploadBtn">Upload Your Shot</button>
+  </section>
+
+  <!-- ===============================
+       GALLERY SECTION
+  ================================== -->
+  <section id="gallery">
+    <h2>Photo Gallery</h2>
+    <!-- Placeholder for dynamically loaded images -->
+    <div class="photo-grid">
+      <!-- Example -->
+      <!--
+      <div class="photo-card">
+        <img src="assets/images/andromeda.jpg" alt="Andromeda Galaxy">
+        <p>Andromeda Galaxy — ISO 1600, 300s</p>
+      </div>
+      -->
+    </div>
+  </section>
+
+  <!-- ===============================
+       OBSERVATION LOG
+  ================================== -->
+  <section id="logbook">
+    <h2>Observation Log</h2>
+    <form id="logForm">
+      <label>Date: <input type="date" id="obs-date" required></label>
+      <label>Location: <input type="text" id="obs-location" placeholder="e.g., Brooklyn, NY"></label>
+      <label>Object Observed: <input type="text" id="obs-object" placeholder="e.g., Saturn"></label>
+      <label>Notes:</label>
+      <textarea id="obs-notes" placeholder="Sky conditions, lens used, etc."></textarea>
+      <button type="submit">Save Log</button>
+    </form>
+
+    <div id="logEntries">
+      <!-- Observation entries will appear here -->
+    </div>
+  </section>
+
+  <!-- ===============================
+       GEAR LIST
+  ================================== -->
+  <section id="gear">
+    <h2>My Gear</h2>
+    <ul>
+      <li>Telescope: Celestron NexStar 6SE</li>
+      <li>Camera: Canon EOS R</li>
+      <li>Mount: Sky-Watcher EQ6-R Pro</li>
+    </ul>
+  </section>
+
+  <!-- ===============================
+       RESOURCES
+  ================================== -->
+  <section id="resources">
+    <h2>Learning & Resources</h2>
+    <ul>
+      <li><a href="#">NASA Image of the Day API</a></li>
+      <li><a href="#">Clear Outside Weather Forecast</a></li>
+      <li><a href="#">AstroBin Photo Community</a></li>
+    </ul>
+  </section>
+
+  <!-- ===============================
+       FOOTER
+  ================================== -->
+  <footer>
+    <p>© 2025 Astrophotography Journal | Designed by Shamod Calhoun</p>
+  </footer>
+
+  <!-- JS Script -->
+  <script src="script.js"></script>
+</body>
+</html>

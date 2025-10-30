@@ -4,10 +4,10 @@
 body{
     font-family: Arial, sans-serif;
     margin: 20px;
-    background: mintcream;
-    color: rgb(34, 211, 196);
+    background-color: bisque;
+    color: #333;
 }
 a:link, a:visited {
-    color: rgb(34, 211, 196);
+    color: darkorange;
     text-decoration: none;
 }
