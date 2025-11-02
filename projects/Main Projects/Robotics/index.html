@@ -1,137 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Robotics Journal</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robotics Learning Journey</title>
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header / Brand -->
-  <header>
-    <h1>My Robotics Journal</h1>
-    <p>Documenting circuits, microcontrollers, mechanics, physics, and math</p>
-    <!-- Optional: Search bar to find past notes/projects -->
-  </header>
 
-  <!-- Navigation for sections -->
+  <!-- Navigation -->
   <nav>
-    <a href="#experiments">Experiments</a>
-    <a href="#circuits">Circuits</a>
-    <a href="#microcontrollers">Microcontrollers</a>
-    <a href="#mechanics">Mechanics</a>
-    <a href="#physics">Physics</a>
-    <a href="#math">Math</a>
-    <a href="#projects">Projects</a>
+    <ul>
+      <li><a href="#electronics">Electronics</a></li>
+      <li><a href="#circuits">Circuits</a></li>
+      <li><a href="#microcontrollers">Microcontrollers</a></li>
+      <li><a href="#programming">Programming</a></li>
+      <li><a href="#sensors">Sensors</a></li>
+      <li><a href="#assembly">Assembly</a></li>
+      <li><a href="#control">Control</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resources">Resources</a></li>
+    </ul>
   </nav>
 
-  <!-- Experiments Section -->
-  <section id="experiments">
-    <h2>Experiments</h2>
-    <!-- Step 1: Display list of experiments -->
-    <!-- Step 2: Each experiment card shows title, date, description, materials -->
-    <!-- Step 3: Option to mark experiment as complete or add notes -->
-    <div id="experiment-list"></div>
-    <!-- Step 4: Form to add a new experiment -->
-    <form id="add-experiment-form">
-      <input type="text" placeholder="Experiment title" required>
-      <textarea placeholder="Description"></textarea>
-      <input type="date" placeholder="Date conducted">
-      <button type="submit">Add Experiment</button>
-    </form>
+  <!-- Sections -->
+  <section id="electronics">
+    <h2>Learning Your Electronics</h2>
+    <p>Discover the basics of electricity, current, voltage, and resistance. Learn about the essential components like resistors, LEDs, capacitors, and transistors that bring your circuits to life.</p>
   </section>
 
-  <!-- Circuits Section -->
   <section id="circuits">
-    <h2>Circuits</h2>
-    <!-- Step 1: Display circuit notes and diagrams -->
-    <!-- Step 2: Each circuit card shows components used, schematic image, and description -->
-    <div id="circuit-list"></div>
-    <form id="add-circuit-form">
-      <input type="text" placeholder="Circuit name" required>
-      <textarea placeholder="Components and description"></textarea>
-      <input type="file" placeholder="Upload diagram/image">
-      <button type="submit">Add Circuit</button>
-    </form>
+    <h2>Building Your First Circuits</h2>
+    <p>Learn how to connect components on a breadboard, create simple LED and switch circuits, and understand series and parallel wiring.</p>
   </section>
 
-  <!-- Microcontrollers Section -->
   <section id="microcontrollers">
-    <h2>Microcontrollers</h2>
-    <!-- Step 1: Track learning progress on Arduino, Raspberry Pi, ESP32, etc. -->
-    <!-- Step 2: Each card includes microcontroller type, project, notes -->
-    <div id="microcontroller-list"></div>
-    <form id="add-microcontroller-form">
-      <input type="text" placeholder="Microcontroller type" required>
-      <textarea placeholder="Project / Notes"></textarea>
-      <button type="submit">Add Entry</button>
-    </form>
+    <h2>Getting to Know Microcontrollers</h2>
+    <p>Understand what a microcontroller is and how it acts as the brain of your robot. Set up your Arduino or Raspberry Pi and upload your first program.</p>
   </section>
 
-  <!-- Mechanics Section -->
-  <section id="mechanics">
-    <h2>Mechanics</h2>
-    <!-- Step 1: Record mechanical systems, link to experiments/projects -->
-    <!-- Step 2: Include diagrams, calculations, and notes -->
-    <div id="mechanics-list"></div>
-    <form id="add-mechanics-form">
-      <input type="text" placeholder="Topic / System name" required>
-      <textarea placeholder="Notes and diagrams"></textarea>
-      <button type="submit">Add Entry</button>
-    </form>
+  <section id="programming">
+    <h2>Coding for Robots</h2>
+    <p>Learn to write simple programs using Arduino C or Python. Explore how to control LEDs, motors, and sensors through code logic.</p>
   </section>
 
-  <!-- Physics Section -->
-  <section id="physics">
-    <h2>Physics Concepts</h2>
-    <!-- Step 1: Record physics principles applied to robotics -->
-    <!-- Step 2: Include formulas, examples, and experiments -->
-    <div id="physics-list"></div>
-    <form id="add-physics-form">
-      <input type="text" placeholder="Concept name" required>
-      <textarea placeholder="Notes, formulas, applications"></textarea>
-      <button type="submit">Add Entry</button>
-    </form>
+  <section id="sensors">
+    <h2>Interacting with the Environment</h2>
+    <p>Experiment with sensors like ultrasonic, infrared, and LDRs. Learn how robots perceive distance, light, and obstacles.</p>
   </section>
 
-  <!-- Math Section -->
-  <section id="math">
-    <h2>Math Applied to Robotics</h2>
-    <!-- Step 1: Track math problems, equations, and solutions -->
-    <!-- Step 2: Each entry includes topic, problem, solution, notes -->
-    <div id="math-list"></div>
-    <form id="add-math-form">
-      <input type="text" placeholder="Topic" required>
-      <textarea placeholder="Problem and solution"></textarea>
-      <button type="submit">Add Entry</button>
-    </form>
+  <section id="assembly">
+    <h2>Building Your First Robot</h2>
+    <p>Assemble your robot's body, attach motors and wheels, and wire your components safely. You'll see your project come to life physically.</p>
   </section>
 
-  <!-- Projects Section -->
+  <section id="control">
+    <h2>Making It Move</h2>
+    <p>Learn about robot control methods — from Bluetooth and Wi-Fi remote operation to autonomous navigation and line following.</p>
+  </section>
+
   <section id="projects">
-    <h2>Projects</h2>
-    <!-- Step 1: List all robotics projects -->
-    <!-- Step 2: Each project card includes title, description, components, photos -->
-    <div id="projects-list"></div>
-    <form id="add-project-form">
-      <input type="text" placeholder="Project title" required>
-      <textarea placeholder="Description and notes"></textarea>
-      <input type="file" placeholder="Upload images">
-      <button type="submit">Add Project</button>
-    </form>
+    <h2>Robotics Projects & Challenges</h2>
+    <p>Put your skills to the test by building mini-projects, automations, and unique robot concepts. Share your builds with the community!</p>
   </section>
 
-  <!-- Footer -->
+  <section id="resources">
+    <h2>Tools, Kits, and Helpful Links</h2>
+    <p>Explore recommended electronics kits, online tools, and free resources to continue learning robotics at your own pace.</p>
+  </section>
+
   <footer>
-    <p>&copy; 2025 Robotics Journal. All rights reserved.</p>
+    <p>© 2025 Robotics Learning Journey | Made by Shamod Calhoun</p>
   </footer>
 
-  <!-- Script -->
-  <script src="script.js"></script>
-  <!-- Step 1: script.js will handle dynamic rendering of notes, experiments, and projects -->
-  <!-- Step 2: Add localStorage or backend persistence -->
 </body>
 </html>
+
 
 <!-- AI Upgrade Ideas:
 🤖 Learning Progress Tracker:

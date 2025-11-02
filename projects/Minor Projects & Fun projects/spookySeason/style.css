@@ -1,0 +1,201 @@
+:root{
+  --bg-img: url("https://hips.hearstapps.com/hmg-prod/images/halloween-pumpkins-royalty-free-image-1727448153.jpg?crop=0.668xw:1.00xh;0.167xw,0&resize=1200:*");
+  --accent: #ff6b00;
+  --accent-2: #ff2d55;
+  --card-bg: rgba(0,0,0,0.55);
+  --glass: rgba(255,255,255,0.03);
+  --text: #ffffff;
+}
+
+/* Page background */
+html,body{
+  height:100%;
+  margin:0;
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background-image: var(--bg-img);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--text);
+}
+
+/* dark overlay so text reads well */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.7));
+  z-index:0;
+  pointer-events:none;
+}
+
+/* Poster card */
+.poster {
+  position:relative;
+  z-index:1;
+  width:min(920px, 92vw);
+  max-width:1000px;
+  border-radius:18px;
+  padding:36px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  background: linear-gradient(135deg, rgba(0,0,0,0.55), rgba(0,0,0,0.32));
+  backdrop-filter: blur(6px) saturate(120%);
+  overflow:hidden;
+  display:grid;
+  grid-template-columns: 1fr 360px;
+  gap:28px;
+  align-items:center;
+}
+
+/* Left content (headline + details) */
+.poster .left {
+  padding: 8px 0;
+}
+
+.headline {
+  font-family: "Creepster", cursive;
+  font-size: clamp(36px, 6vw, 72px);
+  line-height:0.9;
+  margin:0 0 6px 0;
+  color:var(--text);
+  -webkit-text-stroke: 1.5px #000;
+  text-shadow:
+    0 2px 6px rgba(0,0,0,0.8),
+    0 0 18px rgba(255,107,0,0.08);
+  display:inline-block;
+  animation: flicker 3s linear infinite;
+}
+
+/* subtle flicker effect */
+@keyframes flicker {
+  0%, 19%, 21%, 50%, 100% { opacity:1; filter: drop-shadow(0 0 6px rgba(255,107,0,0.08)); transform: translateY(0); }
+  20% { opacity:0.85; transform: translateY(-1px); }
+  51% { opacity:0.7; transform: translateY(0.5px); }
+}
+
+.hamburger {
+  font-size: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+.hidden {
+  display: none;
+}
+.tagline {
+  font-size: clamp(14px, 2.2vw, 18px);
+  margin:6px 0 18px 0;
+  opacity:0.95;
+  color:#ffd9b8;
+  
+}
+
+.details {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:10px;
+  padding:14px;
+  color:#fff;
+  font-weight:500;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+  max-width:70%;
+}
+
+.details .line { margin:6px 0; font-size:15px; }
+
+.cta {
+  margin-top:18px;
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.btn {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border:none;
+  color:white;
+  padding:12px 18px;
+  border-radius:10px;
+  font-weight:700;
+  cursor:pointer;
+  box-shadow: 0 8px 18px rgba(255,80,10,0.16);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.btn:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgba(255,80,10,0.22); }
+
+.small {
+  font-size:13px;
+  opacity:0.9;
+  padding:8px 12px;
+  background:transparent;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.06);
+  color: #fff;
+}
+
+/* Right column: spooky illustration + footer text */
+.poster .right {
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+}
+
+.spooky-img {
+  width:100%;
+  aspect-ratio: 4/3;
+  background-image: url("https://hips.hearstapps.com/hmg-prod/images/halloween-pumpkins-royalty-free-image-1727448153.jpg?crop=0.668xw:1.00xh;0.167xw,0&resize=1200:*");
+  background-size:cover;
+  background-position:center;
+  border-radius:12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.footer-note {
+  font-size:13px;
+  color: #ffd9b8;
+  opacity:0.95;
+  text-align:center;
+}
+
+/* floating bats/pumpkins decorative shapes */
+.float {
+  position:absolute;
+  pointer-events:none;
+}
+.bat {
+  width:60px; height:30px;
+  background: radial-gradient(circle at 35% 30%, rgba(0,0,0,0.9), rgba(0,0,0,0.7));
+  border-radius: 50% 50% 10% 10%;
+  transform: rotate(-10deg);
+  left: -10%;
+  top: 8%;
+  opacity:0.85;
+  filter: drop-shadow(0 6px 8px rgba(0,0,0,0.6));
+  animation: fly 9s linear infinite;
+}
+.bat:after{
+  content:"";
+  position:absolute;
+  left:50%; top:50%;
+  width:34px; height:18px;
+  background:inherit;
+  border-radius:50%;
+  transform: translate(-50%,-50%) rotate(12deg);
+}
+@keyframes fly {
+  0% { transform: translateX(-60px) translateY(0) rotate(-6deg); opacity:0.85; }
+  50% { transform: translateX(220px) translateY(-26px) rotate(6deg); opacity:1; }
+  100% { transform: translateX(-60px) translateY(0) rotate(-6deg); opacity:0.85; }
+}
+
+/* Responsive adjustments */
+@media (max-width:860px){
+  .poster { grid-template-columns: 1fr; padding:24px; gap:18px; }
+  .details { max-width:100%; }
+  .poster .right { order:-1; }
+}

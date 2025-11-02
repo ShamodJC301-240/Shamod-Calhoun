@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Spooky Season — Poster</title>
+
+  <!-- Google Fonts (spooky headline + readable body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="hamburger" onclick="toggleMenu()">
+    ☰
+  </div>
+  <nav id="menu" class="hidden">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul><!-- hidden nav for accessibility -->
+  </nav>
+  <main class="poster" role="main" aria-labelledby="event-title">
+    <!-- decorative floating bat -->
+    <div class="float bat" aria-hidden="true"></div>
+
+    <div class="left">
+      <h1 id="event-title" class="headline">Spooky Season</h1>
+      <p class="tagline">A haunted night of treats, tricks and festivities</p>
+
+      <div class="details" aria-label="Event details">
+        <div class="line"><strong>Date:</strong> October 31, 2025</div>
+        <div class="line"><strong>Time:</strong> 7:00 PM — Midnight</div>
+        <div class="line"><strong>Location:</strong> Central Park</div>
+        <div class="line" style="margin-top:8px; font-weight:600; color:#ffd9b8;">Cost: Free / Everyone welcome</div>
+
+        <div class="cta" style="margin-top:12px;">
+          <button class="btn" id="joinBtn" target="_blank">Join the party</button>
+          <button class="small" onclick="window.print()">Print Poster</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="spooky-img" role="img" aria-label="Halloween pumpkins and spooky scene"></div>
+      <div class="footer-note"> Costumes Encouraged • Family friendly • Refreshments available </div>
+    </div>
+  </main>
+
+  <footer style="position:fixed; bottom:20px; left:50%; transform:translateX(-50%); color:#fff; z-index:2; font-weight:600;">
+    HAPPY HALLOWEEN 🎃
+  </footer>
+
+  <script src="script.js">
+
+  </script>
+</body>
+</html>

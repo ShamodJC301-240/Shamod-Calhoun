@@ -3,20 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Added meta description for better SEO -->
+  <!-- TODO: Add Open Graph meta tags for better social media sharing -->
+  <!-- TODO: Add structured data (JSON-LD) for local business SEO -->
+  <!-- OPTIMIZE: Consider adding preconnect links for external image domains -->
   <meta name="description" content="Butter & Bonbons - Fresh, homemade baked goods and confections since 2000. Cakes, cookies, candies, breads and more!"/>
-  <title>Butter & Bonbons - Sweet Shop</title>
+  <title>Butter & Bonbons - Fresh Baked Goods and confections!</title>
+  <!-- Custom favicon: Added bread emoji as favicon for brand recognition -->
   <link rel="icon" href="data:image/svg+xml,<svg  xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍞</text></svg>" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- Dark mode toggle: Added for better user experience and accessibility. Plus my friends always get on me about not using dark mode in real life -->
   <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
 
   <header>
-    <h1>Butter & Bonbons</h1>
-    <p>Freshly Baked Goodness And Confections Every Day — now with ice cream, froyo, and candy!</p>
+    <h1>Butter & Bonbons</h1> <!-- Changed the name of the bakery from Hugs and Honey into Butter & Bonbons. I like the way it rolls off the tongue -->
+    <p>Freshly Baked Goodness And Confections Every Day. Now with Froyo and Ice Cream Desserts!</p>
   </header>
 
+  <!-- Sticky navigation with smooth scroll links to sections -->
+  <!-- TODO: Add aria-label for navigation for screen readers -->
+  <!-- TODO: Add skip-to-content link for keyboard navigation accessibility -->
+  <!-- OPTIMIZE: Consider making cart a <button> instead of <div> for better semantics and accessibility -->
   <nav>
     <a href="#about">About</a>
     <a href="#specials">Specials</a>
@@ -24,11 +34,13 @@
     <a href="#events">Events</a>
     <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
+    <!-- Interactive cart with item count display -->
     <div class="cart" onclick="toggleCart()">
       🛒 <span id="cart-count">0</span>
     </div>
   </nav>
 
+  <!-- Slide-out panel for cart management with local storage -->
   <div id="cart-panel" class="cart-panel">
     <div class="cart-header">
       <h3>Your Cart</h3>
@@ -39,69 +51,248 @@
     <button onclick="checkout()">Checkout</button>
   </div>
 
-  <!-- ABOUT ... (kept as you provided) -->
   <section id="about">
     <h2>About Us</h2>
-    <p>Butter & Bonbons, a family owned bakery, delighting tastebuds since 2000.</p>
-    <div class="info-grid"> ... </div>
-    <div class="carousel"> ... </div>
-  </section>
-
-  <!-- PRODUCTS SECTION: now data-driven -->
-  <section id="products">
-    <h2>Our Products</h2>
-
-    <div class="filter">
-      <input type="text" id="searchInput" placeholder="Search products..." />
-      <div class="category-filters" id="categoryFilters">
-        <!-- Category buttons are generated from data, but keep your All button for fallback -->
-        <button onclick="filterByCategory('all')" class="category-btn active">All</button>
+    <p>Butter & Bonbons, a family owned bakery, that has been delighting tastebuds since 2000 with fresh, homemade baked goods.</p>
+    <!-- Grid layout for organized business information display -->
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>📍 Location</h3>
+        <p>123 Baker Street<br>Sugarlane, 12345</p>
+      </div>
+      <div class="info-card">
+        <h3>🕒 Hours</h3>
+        <p>Mon-Fri: 6:00 AM - 7:00 PM<br>
+        Sat-Sun: 7:00 AM - 6:00 PM</p>
+      </div>
+      <div class="info-card">
+        <h3>📞 Phone</h3>
+        <p>(555) 123-BAKE<br>Order ahead!</p>
       </div>
     </div>
-
-    <!-- Product grid: will be filled by products.js -->
-    <div class="products" id="productList"></div>
-
-    <!-- Template for a product card -->
-    <template id="product-card">
-      <article class="product-card">
-        <img class="prod-img" src="" alt="" loading="lazy" />
-        <div class="card-body">
-          <h3 class="prod-name"></h3>
-          <p class="prod-desc"></p>
-          <p class="prod-price"></p>
-
-          <!-- Variant area (flavor / size) will be populated if product.variants exists -->
-          <div class="variant-controls"></div>
-
-          <div class="card-actions">
-            <label>
-              Qty
-              <input type="number" class="qty-input" min="1" value="1">
-            </label>
-            <button class="add-to-cart">Add to Cart</button>
-          </div>
-        </div>
-      </article>
-    </template>
+    <!-- Scroll showcase of bakery products -->
+    <!-- TODO: Add loading="lazy" to images below the fold for better performance -->
+    <!-- TODO: Implement responsive images with srcset for different screen sizes -->
+    <!-- OPTIMIZE: Host images locally or use a CDN to reduce external dependencies -->
+    <!-- TODO: Add width and height attributes to prevent layout shift -->
+    <div class="carousel">
+      <img src="https://images.unsplash.com/photo-1691480162735-9b91238080f6?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Croissant"><!-- Going to update links to make them more readable, but also make sure that they are working -->
+      <img src="https://vikalinka.com/wp-content/uploads/2021/03/Garlic-Butter-Dinner-Rolls-11-Edit.jpg" alt="Bread">
+      <img src="https://www.mamaknowsglutenfree.com/wp-content/uploads/2021/07/featured-gluten-free-chocolate-chip-cookies-recipe.jpg" alt="Cookies">
+      <img src="https://www.glutenfreepalate.com/wp-content/uploads/2020/06/Gluten-Free-Birthday-Cake-4.2-720x405.jpg" alt="Cake">
+      <img src="https://www.iheartnaptime.net/wp-content/uploads/2022/03/I-Heart-Naptime-Easter-Cake-Pops-9-500x500.jpg" alt="Cake Pops">
+    </div>
   </section>
 
-  <!-- SPECIALS / REVIEWS / EVENTS / LOYALTY / CONTACT sections unchanged ... -->
-  <section id="specials"> ... </section>
-  <section id="reviews"> ... </section>
-  <section id="events"> ... </section>
-  <section id="loyalty"> ... </section>
-  <section id="contact"> ... </section>
+  <section id="products">
+    <h2>Our Products</h2>
+    <!-- Product filtering with categories -->
+    <div class="filter">
 
-  <footer>&copy; 2025 Butter & Bonbons. All rights reserved.</footer>
+      <input type="text" id="searchInput" placeholder="Search products..." oninput="filterProducts()">
+<!-- All category filters are buttons that filter products by category. -->
+      <div class="category-filters">
+        <button onclick="filterByCategory('all')" class="category-btn active">All</button>
+        <button onclick="filterByCategory('Cakes')" class="category-btn">Cakes</button>
+        <button onclick="filterByCategory('Breads')" class="category-btn">Breads</button>
+        <button onclick="filterByCategory('Cookies')" class="category-btn">Cookies</button>
+        <button onclick="filterByCategory('Pastries')" class="category-btn">Pastries</button>
+<!--        <button onclick="filterByCategory('Candy')" class="category-btn">Candy</button>
+        <button onclick="filterByCategory('specialties')" class="category-btn">Specialty sweets</button> 
+        <button onclick="filterByCategory('Coffee')" class="category-btn">Coffee</button>
+        <button onclick="filterByCategory(Tea')" class="category-btn">Tea</button>
+        <button onclick="filterByCategory('Beverages')" class="category-btn">Beverages</button>--> 
+        
+      </div>
+    </div>
+    <!-- Product grid: Container for dynamically rendered product cards -->
+    <div class="products" id="productList">
+      <!-- Products dynamically rendered via JS for maintainability -->
+    </div>
+  </section>
 
+  <!-- Weekly Specials Section -->
+  <section id="specials">
+    <h2>🌟 This Week's Specials</h2>
+    <div class="specials-grid">
+      <div class="special-card">
+        <h3>Monday Special</h3>
+        <p>Buy 2 Croissants, Get 1 FREE!</p>
+        <span class="special-price">$5.00 (Save $2.50)</span>
+      </div>
+      <div class="special-card">
+        <h3>Weekend Family Pack</h3>
+        <p>Dozen cookies + Banana bread + 2 Muffins</p>
+        <span class="special-price">$18.99 (Save $5.00)</span>
+      </div>
+      <div class="special-card seasonal">
+        <h3>🎃 Fall Special</h3>
+        <p>Pumpkin Spice everything! Limited time seasonal flavors</p>
+        <span class="special-badge">New!</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews Section -->
+  <section id="reviews">
+    <h2>💬 What Our Community Says</h2>
+    <div class="reviews-container">
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"The chocolate cake was absolutely divine! Perfect for my daughter's birthday party."</p>
+        <span class="reviewer">- Sarah M.</span>
+      </div>
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"Best croissants in town! Reminds me of Paris. The staff is so friendly too!"</p>
+        <span class="reviewer">- Mike R.</span>
+      </div>
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"Love the sourdough bread. I'm a regular customer and they always remember my order!"</p>
+        <span class="reviewer">- Emma L.</span>
+      </div>
+    </div>
+    <!-- Review submission form -->
+    <!-- TODO: Add proper label elements for form inputs (accessibility) -->
+    <!-- TODO: Add aria-required and aria-invalid attributes for better screen reader support -->
+    <!-- OPTIMIZE: Add honeypot field for spam prevention -->
+    <div class="review-form-container">
+      <h3>Share Your Experience</h3>
+      <form class="review-form" onsubmit="submitReview(event)">
+        <input type="text" placeholder="Your Name" required> <!-- Tweak this -->
+        <select id="rating" required>
+          <option value="">Rate your experience</option>
+          <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+          <option value="4">⭐⭐⭐⭐ Very Good</option>
+          <option value="3">⭐⭐⭐ Good</option>
+          <option value="2">⭐⭐ Fair</option>
+          <option value="1">⭐ Needs Improvement</option>
+        </select>
+        <textarea rows="3" placeholder="Tell us about your experience..." required></textarea>
+        <button type="submit">Share Review</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Community Events and Workshops Section -->
+  <section id="events">
+    <h2>🎓 Baking Classes & Events</h2>
+    <div class="events-grid">
+      <div class="event-card">
+        <div class="event-date">Nov 15</div>
+        <h3>Beginner Bread Making</h3>
+        <p>Learn the basics of bread making with our head baker. All ingredients provided!</p>
+        <div class="event-details">
+          <span>📍 Our Bakery Kitchen</span>
+          <span>⏰ 2:00 PM - 4:00 PM</span>
+          <span>💰 $35 per person</span>
+        </div>
+        <button onclick="registerForEvent('bread-making')">Register Now</button>
+      </div>
+      <div class="event-card">
+        <div class="event-date">Nov 22</div>
+        <h3>Kids Cookie Decorating</h3>
+        <p>Fun cookie decorating session for kids ages 6-12. Parents welcome!</p>
+        <div class="event-details">
+          <span>📍 Our Bakery Kitchen</span>
+          <span>⏰ 10:00 AM - 12:00 PM</span>
+          <span>💰 $20 per child</span>
+        </div>
+        <button onclick="registerForEvent('cookie-decorating')">Register Now</button>
+      </div>
+      <div class="event-card">
+        <div class="event-date">Dec 1</div>
+        <h3>Holiday Cake Decorating</h3>
+        <p>Create beautiful holiday cakes perfect for your celebrations!</p>
+        <div class="event-details">
+          <span>📍 Our Bakery Kitchen</span>
+          <span>⏰ 1:00 PM - 4:00 PM</span>
+          <span>💰 $50 per person</span>
+        </div>
+        <button onclick="registerForEvent('holiday-cakes')">Register Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Loyalty Program Section & Cistomer Rewards -->
+  <section id="loyalty">
+    <h2>🏆 Butter & Bonbons Rewards</h2>
+    <div class="loyalty-container">
+      <div class="loyalty-info">
+        <h3>Join Our Sweet Rewards Program!</h3>
+        <ul class="benefits-list">
+          <li>🎂 Earn 1 point for every $1 spent</li>
+          <li>🎁 Get a FREE pastry after 50 points</li>
+          <li>🍰 Birthday month: 20% off any cake</li>
+          <li>📧 Early access to new products & specials</li>
+          <li>🎉 Double points on weekdays</li>
+        </ul>
+      </div>
+      <div class="loyalty-signup">
+        <h3>Sign Up Today!</h3>
+        <form class="loyalty-form" onsubmit="signupLoyalty(event)">
+          <input type="text" placeholder="Full Name" required>
+          <input type="email" placeholder="Email Address" required>
+          <input type="tel" placeholder="Phone Number" required>
+          <input type="date" placeholder="Birthday" required>
+          <button type="submit">Join Rewards Program</button>
+        </form>
+        <p class="loyalty-disclaimer">*Points expire after 1 year of inactivity</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <!-- Contact form with order inquiry option -->
+    <div class="contact-tabs">
+      <button class="tab-btn active" onclick="switchTab('general')">General Inquiry</button>
+      <button class="tab-btn" onclick="switchTab('order')">Order Status</button>
+      <button class="tab-btn" onclick="switchTab('catering')">Catering Request</button>
+    </div>
+    
+    <form class="contact-form" id="general-form" onsubmit="event.preventDefault(); showToast('Thanks for your message! We will get back to you within 24 hours.'); this.reset();">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="tel" placeholder="Phone Number (optional)">
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <form class="contact-form hidden" id="order-form" onsubmit="checkOrderStatus(event)">
+      <input type="text" placeholder="Order Number" required>
+      <input type="email" placeholder="Email Used for Order" required>
+      <button type="submit">Check Order Status</button>
+    </form>
+
+    <form class="contact-form hidden" id="catering-form" onsubmit="submitCateringRequest(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="date" placeholder="Event Date" required>
+      <input type="number" placeholder="Number of Guests" required>
+      <select required>
+        <option value="">Event Type</option>
+        <option value="wedding">Wedding</option>
+        <option value="birthday">Birthday Party</option>
+        <option value="corporate">Corporate Event</option>
+        <option value="other">Other</option>
+      </select>
+      <textarea rows="4" placeholder="Special requests or dietary restrictions..." required></textarea>
+      <button type="submit">Request Catering Quote</button>
+    </form>
+  </section>
+
+  <!-- Footer: Simple copyright information -->
+  <footer>
+    &copy; 2025 Butter & Bonbons. All rights reserved.
+  </footer>
+
+  <!-- Toastyyyyy! notifications: Container for temporary success/error messages -->
   <div id="toastContainer"></div>
 
-  <!-- NEW: products renderer + cart scripts -->
-  <script src="js/products.js"></script>
-  <script src="js/cart.js"></script>
-
-  <!-- keep your script.js for UI (dark mode, toast, forms) -->
   <script src="script.js"></script>
 </body>
 </html>
+
