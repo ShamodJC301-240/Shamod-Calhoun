@@ -1,12 +1,15 @@
-/* ===== Base Page Setup ===== */
+/* Colors I want to add: #ECFAE5, #DDF6D2, #CAE8BD, #B0DB9C  */
+
 body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: linear-gradient(180deg, #0C2B4E 0%, #1A3D64 60%, #1D546C 100%);
-  color: #F4F4F4;
-  text-align: center;
+  margin: 10px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #ECFAE5;
+  color: black;
+  -webkit-font-smoothing:antialiased;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.4;
 
 }
 
@@ -18,7 +21,6 @@ body {
   padding: 20px 0;
   flex: 1;
 }
-
 /* ===== Content ===== */
 nav a {
   color: #a9c7ff;
@@ -31,8 +33,8 @@ nav a:hover {
   color: #6fb6ff;
 }
 
-h2 {
-  color: #d3e0ff;
+h2, h3 {
+  color: #B0DB9C;
 }
 
 h3 a {
@@ -53,6 +55,35 @@ img {
 
 /* Footer */
 footer {
-  color: #8ba3c2;
+  color: black;
   font-size: 0.9rem;
+}
+
+.form-group {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack labels and inputs vertically */
+  gap: 1rem; /* Increased gap for better spacing */
+  margin: 15px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+label {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: .2rem;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #6fb6ff;
+  box-shadow: 0 0 5px rgba(111, 182, 255, 0.5);
+  outline: none;
 }

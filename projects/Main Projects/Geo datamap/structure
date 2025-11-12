@@ -1,0 +1,15 @@
+geodatamap/
+│
+├── index.html              → Main interactive map
+├── data.html               → Data table or analytics view
+├── upload.html             → Upload new coordinates (CSV/JSON)
+│
+├── css/
+│   └── style.css
+├── js/
+│   ├── main.js
+│   ├── map.js
+│   ├── upload.js
+│   └── data.js
+└── data/
+    └── markers.json

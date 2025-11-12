@@ -10,73 +10,95 @@
   <!-- Header / Brand -->
   <header>
     <h1>Wonderful Day for a Neighbor</h1>
-    <p>Stay connected, help each other, and plan community events</p>
-    <!-- Optional: Login/Register buttons -->
+    <p>Your neighborhood hub - stay informed, buy & sell, and connect with neighbors</p>
   </header>
 
   <!-- Navigation -->
   <nav>
-    <a href="#announcements">Announcements</a>
+    <a href="#announcements">News & Updates</a>
+    <a href="#marketplace">Marketplace</a>
+    <a href="#giveaways">Giveaways</a>
     <a href="#events">Events</a>
     <a href="#food-drives">Food Drives</a>
-    <a href="#help-requests">Help Requests</a>
     <a href="#discussion">Discussion Board</a>
   </nav>
 
   <!-- Announcements Section -->
   <section id="announcements">
-    <h2>Community Announcements</h2>
+    <h2>📢 News & Updates</h2>
+    <p class="section-description">Stay informed about what's happening in your neighborhood</p>
     <div id="announcement-list"></div>
     <form id="add-announcement-form">
       <input type="text" placeholder="Title" required>
-      <textarea placeholder="Message"></textarea>
-      <button type="submit">Post Announcement</button>
+      <textarea placeholder="What's the news?" required></textarea>
+      <button type="submit">Post Update</button>
+    </form>
+  </section>
+
+  <!-- Marketplace Section -->
+  <section id="marketplace">
+    <h2>🛒 Neighborhood Marketplace</h2>
+    <p class="section-description">Buy and sell items within your community</p>
+    <div id="marketplace-list"></div>
+    <form id="add-marketplace-form">
+      <input type="text" placeholder="Item Name" required>
+      <input type="number" placeholder="Price ($)" step="0.01" min="0" required>
+      <textarea placeholder="Description" required></textarea>
+      <input type="text" placeholder="Your Name" required>
+      <input type="text" placeholder="Contact (phone or email)" required>
+      <button type="submit">List Item for Sale</button>
+    </form>
+  </section>
+
+  <!-- Giveaways Section -->
+  <section id="giveaways">
+    <h2>🎁 Free Giveaways</h2>
+    <p class="section-description">Offering items for free to neighbors</p>
+    <div id="giveaway-list"></div>
+    <form id="add-giveaway-form">
+      <input type="text" placeholder="Item Name" required>
+      <textarea placeholder="Description & Condition" required></textarea>
+      <input type="text" placeholder="Your Name" required>
+      <input type="text" placeholder="Contact Info" required>
+      <button type="submit">Post Giveaway</button>
     </form>
   </section>
 
   <!-- Events Section -->
   <section id="events">
-    <h2>Upcoming Community Events</h2>
+    <h2>📅 Upcoming Community Events</h2>
+    <p class="section-description">Neighborhood gatherings, meetings, and activities</p>
     <div id="event-list"></div>
     <form id="add-event-form">
       <input type="text" placeholder="Event Name" required>
       <input type="date" required>
       <input type="time">
-      <textarea placeholder="Details"></textarea>
+      <textarea placeholder="Event Details" required></textarea>
       <button type="submit">Add Event</button>
     </form>
   </section>
 
   <!-- Food Drives Section -->
   <section id="food-drives">
-    <h2>Food Drives & Donations</h2>
+    <h2>🍎 Food Drives & Donations</h2>
+    <p class="section-description">Organize and participate in community food drives</p>
     <div id="food-drive-list"></div>
     <form id="add-food-drive-form">
       <input type="text" placeholder="Food Drive Name" required>
       <input type="date" required>
-      <textarea placeholder="Details"></textarea>
+      <textarea placeholder="Details & Drop-off Location" required></textarea>
       <button type="submit">Add Food Drive</button>
-    </form>
-  </section>
-
-  <!-- Help Requests Section -->
-  <section id="help-requests">
-    <h2>Help Requests</h2>
-    <div id="help-request-list"></div>
-    <form id="add-help-request-form">
-      <input type="text" placeholder="Request Title" required>
-      <textarea placeholder="Describe your request"></textarea>
-      <button type="submit">Submit Request</button>
     </form>
   </section>
 
   <!-- Discussion Board Section -->
   <section id="discussion">
-    <h2>Community Discussion</h2>
+    <h2>💬 Community Discussion</h2>
+    <p class="section-description">Share ideas and have conversations with neighbors</p>
     <div id="discussion-list"></div>
     <form id="add-discussion-form">
       <input type="text" placeholder="Topic Title" required>
-      <textarea placeholder="Discussion content"></textarea>
+      <textarea placeholder="Start the conversation..." required></textarea>
       <button type="submit">Start Discussion</button>
     </form>
   </section>
@@ -90,6 +112,7 @@
   <!-- script.js will handle dynamic content for announcements, events, requests, and discussions -->
 </body>
 </html>
+
 
 <!-- AI Upgrade Ideas:
  🧑‍🤝‍🧑 5. “Wonderful Day for a Neighbor” (community app)

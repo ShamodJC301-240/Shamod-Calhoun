@@ -1,6 +1,4 @@
-*{
 
-}
 
 body {
     font-family: Arial, sans-serif;
@@ -13,6 +11,8 @@ header {
     background-color: #B7E5CD;
     color: white;
     padding: 10px 0;
+    margin: 10px;
+    border-radius: 8px;
 
 
 }

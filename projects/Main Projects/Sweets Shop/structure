@@ -1,0 +1,17 @@
+sweet-shop/
+│
+├── index.html              → Home & featured products
+├── products.html           → All bakery items
+├── cart.html               → Shopping cart
+├── contact.html            → Contact / About page
+│
+├── css/
+│   └── style.css
+├── js/
+│   ├── main.js
+│   ├── cart.js
+│   └── products.js
+└── images/
+    ├── cakes/
+    ├── pastries/
+    └── breads/

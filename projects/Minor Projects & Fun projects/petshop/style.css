@@ -1,71 +1,103 @@
-    /* --- Base Styling --- */
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #fafafa;
-      color: #333;
-      scroll-behavior: smooth;
-    }
+/* --- Base Styling --- */
+/* SUGGESTION: Add CSS variables for consistent color scheme management */
+/* SUGGESTION: Consider adding dark mode support with @media (prefers-color-scheme: dark) */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  scroll-behavior: smooth;
+  /* OPTIMIZATION: Added for better mobile rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-    header {
-      background-color: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 1.5rem 0;
-    }
+header {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  /* SUGGESTION: Add a subtle gradient or pattern background for visual interest */
+  /* SUGGESTION: Consider adding box-shadow for depth */
+}
 
-    nav {
-      background-color: #1abc9c;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+nav {
+  background-color: #1abc9c;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* OPTIMIZATION: Add box-shadow for better visibility when scrolling */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
-    nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      list-style: none;
-      margin: 0;
-      padding: 0.75rem 0;
-    }
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 0;
+}
 
-    nav li {
-      margin: 0 15px;
-    }
+nav li {
+  margin: 0 15px;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+  /* SUGGESTION: Add padding for larger click targets (better UX on mobile) */
+  /* SUGGESTION: Consider adding active state styling for current section */
+}
 
-    nav a:hover {
-      color: #f1f1f1;
-      text-decoration: underline;
-    }
+nav a:hover {
+  color: #f1f1f1;
+  text-decoration: underline;
+}
 
-    section {
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 40px 20px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    }
+section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  /* SUGGESTION: Add smooth animations when sections scroll into view */
+  /* SUGGESTION: Consider adding hover effects for better interactivity */
+  /* SUGGESTION: On smaller screens, reduce margin and padding for better mobile experience */
+}
 
-    section h2 {
-      color: #1abc9c;
-      border-left: 5px solid #16a085;
-      padding-left: 10px;
-      margin-bottom: 15px;
-    }
+section h2 {
+  color: #1abc9c;
+  border-left: 5px solid #16a085;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  /* SUGGESTION: Add icon support or emoji styling for consistent sizing */
+  /* SUGGESTION: Consider adding a subtle animation on page load */
+}
 
-    footer {
-      background-color: #2c3e50;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
+/* SUGGESTION: Add responsive design media queries for mobile devices */
+/* SUGGESTION: Example - @media (max-width: 768px) { ... } for tablets */
+/* SUGGESTION: Example - @media (max-width: 480px) { ... } for phones */
+
+/* SUGGESTION: Add styling for product cards/grid layouts */
+/* SUGGESTION: Example - .product-card { display: grid; ... } */
+
+/* SUGGESTION: Add button styling for CTAs (Call-to-Action buttons) */
+/* SUGGESTION: Example - .btn-primary { background: #1abc9c; padding: 12px 24px; ... } */
+
+/* SUGGESTION: Add animation keyframes for interactive elements */
+/* SUGGESTION: Example - @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } } */
+
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  /* SUGGESTION: Add footer links styling for navigation */
+  /* SUGGESTION: Consider multi-column layout for footer content */
+  /* SUGGESTION: Add social media icon hover effects */
+}

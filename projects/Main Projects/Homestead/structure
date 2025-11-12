@@ -1,0 +1,29 @@
+homestead-app/
+│
+├── index.html              → Dashboard overview
+├── garden.html             → Gardening, planting zones, seed data
+├── pantry.html             → Recipes, food storage, preservation logs
+├── survival.html           → Tools, bug-out gear, emergency kits
+├── weather.html            → Weather, moon phase, forecasts
+│
+├── assets/
+│   ├── images/
+│   ├── icons/
+│   └── videos/
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   ├── main.js             → Shared scripts (nav, theming, etc.)
+│   ├── garden.js           → Zone calculator, seed planner
+│   ├── pantry.js           → Recipe gallery, timers, etc.
+│   └── survival.js         → Tool list, embedded video links
+│
+└── data/
+    ├── seeds.json          → USDA zone recommendations
+    ├── recipes.json        → Recipe data
+    ├── tools.json          → Survival gear links & info
+    └── contacts.json       → Emergency contact data
+
+README.md                   → Project overview and instructions

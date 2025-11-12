@@ -28,6 +28,17 @@ body {
   line-height: 1.6;          /* Improved readability */
   scroll-behavior: smooth;   /* Smooth anchor link transitions */
 }
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px;        /* Slightly smaller font on small screens */
+  }
+  
+}
+@media screen and (max-width: 1024px) {
+  body{
+    font-size: 15px;        /* Medium font size for tablets */
+  }
+}
 
 /* Header styling: Welcoming banner with rounded bottom corners */
 header {
