@@ -15,3 +15,25 @@ sweet-shop/
     ├── cakes/
     ├── pastries/
     └── breads/
+
+
+/butter-bonbons
+  index.html
+  style.css
+  script.js
+  /assets
+      /images
+      /icons
+  /recipes
+      recipes.html
+      recipe-details.html
+      recipes.json
+  /community
+      community.html
+      submit-recipe.html
+  /gallery
+      gallery.html
+  /blog
+      blog.html
+  /how-to
+      how-to.html

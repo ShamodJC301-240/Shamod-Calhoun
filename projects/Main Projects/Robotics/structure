@@ -1,0 +1,27 @@
+robotics-learning-journey/
+│
+├── index.html                 # Main landing page (your current page)
+├── style.css                  # Main CSS file
+├── script.js                  # Main JS file for tab navigation or other interactivity
+│
+├── pages/                     # All secondary HTML pages
+│   ├── electronics.html
+│   ├── circuits.html
+│   ├── microcontrollers.html
+│   ├── programming.html
+│   ├── sensors.html
+│   ├── assembly.html
+│   ├── control.html
+│   ├── projects.html
+│   └── resources.html
+│
+├── assets/                    # All static assets
+│   ├── images/                # Images for tutorials or diagrams
+│   │   ├── electronics/
+│   │   ├── circuits/
+│   │   └── robots/
+│   ├── fonts/                 # Any custom fonts (optional)
+│   ├── pdfs/                  # Guides, datasheets, or downloadable content
+│   └── videos/                # Any video tutorials
+│
+└── README.md                  # Optional project overview

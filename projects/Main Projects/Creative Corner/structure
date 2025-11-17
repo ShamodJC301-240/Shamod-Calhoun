@@ -1,0 +1,25 @@
+creative-corner/
+│
+├── index.html                 # Main landing page (your current page)
+├── style.css                  # Main CSS file
+├── script.js                  # Main JS file for interactivity (optional)
+│
+├── pages/                     # Optional: secondary pages if you expand
+│   ├── drawing.html
+│   ├── coloring.html
+│   ├── painting.html
+│   ├── clay-pottery.html
+│   ├── sewing.html
+│   ├── clothing.html
+│   └── gadgets.html
+│
+├── assets/                    # Static assets
+│   ├── images/                # Images for projects, placeholders, icons
+│   │   ├── drawing/
+│   │   ├── coloring/
+│   │   ├── painting/
+│   │   └── clay-pottery/
+│   ├── fonts/                 # Any custom fonts
+│   └── pdfs/                  # Worksheets, tutorials, or guides
+│
+└── README.md                  # Project overview (optional)

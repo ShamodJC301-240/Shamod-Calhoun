@@ -1,54 +1,320 @@
+/* =========================================
+   Cosmic Captures — Astrophotography Gallery
+   Colors: #0C2B4E, #1A3D64, #1D546C, #F4F4F4
+   Author: Shamod Calhoun
+   ========================================= */
+
+/* ========== Base Styles ========== */
 :root {
-  --deep-space: #0b0c10;
-  --star-silver: #c0c0c0;
-  --nebula-purple: #6a0dad;
-  --comet-blue: #1e90ff;
-  --galaxy-pink: #ff69b4;
+  --dark-blue: #0C2B4E;
+  --mid-blue: #1A3D64;
+  --teal-blue: #1D546C;
+  --light-gray: #F4F4F4;
+  --accent: #56C6F9;
+  --text-light: #F4F4F4;
+  --text-dark: #0C2B4E;
 }
+
 * {
-  margin: 5px;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+  scroll-behavior: smooth;
 }
-body{
-  background-color: #0b0c10;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  background: var(--deep-space);
-  color: var(--star-silver);
+
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background: var(--dark-blue);
+  color: var(--text-light);
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
-.fun-facts-section { /* New Section for Fun Facts */
+/* ========== Layout Containers ========== */
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
   text-align: center;
-  background: radial-gradient(ellipse at center, #0a0a1a 0%, #000 100%);
-  color: #d9e4ff;
-  padding: 3rem 1.5rem; /* Increased padding for better spacing */
-  margin-top: 4rem; /* Space above the section */
-  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle top border */
+  background: var(--mid-blue);
+  color: var(--light-gray);
+  padding: 2rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
-.fun-facts-section h2 {
-  font-size: 2rem; /* Increased font size for better visibility */
-  margin-bottom: 1.5rem; /* Space below the heading */
-  color: #88c9ff; /* Lighter color for heading */
-  text-shadow: 0 0 10px rgba(136, 201, 255, 0.4); /* Glow effect */
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+header p.small {
+  color: var(--accent);
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--light-gray);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--accent);
+}
+
+/* ========== Hero Section ========== */
+.hero-compact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(135deg, var(--mid-blue), var(--teal-blue));
+  padding: 3rem 1rem;
+  gap: 2rem;
+  text-align: center;
+}
+
+.hero-compact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-compact .lead {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  background: var(--accent);
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #aee7ff;
+}
+
+/* ========== Featured Image Aside ========== */
+.featured-aside {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.featured-aside img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+}
+
+.featured-aside figcaption {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* ========== Main Grid ========== */
+.main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  background: var(--dark-blue);
+}
+
+/* ========== Gallery Section ========== */
+#gallery {
+  background: var(--mid-blue);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+#gallery-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.gallery-filters {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.filter-btn {
+  background: var(--teal-blue);
+  border: none;
+  color: var(--light-gray);
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background: var(--accent);
+  color: var(--dark-blue);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* ========== Sidebar ========== */
+.sidebar {
+  background: var(--teal-blue);
+  padding: 2rem;
+  border-radius: 12px;
+  color: var(--light-gray);
+}
+
+.sidebar h3 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.sidebar p, .sidebar li {
+  font-size: 0.9rem;
+}
+
+.sidebar ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.contact-form button {
+  background: var(--accent);
+  border: none;
+  color: var(--dark-blue);
+  font-weight: bold;
+  padding: 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #aee7ff;
+}
+
+/* ========== Fun Facts Section ========== */
+.fun-facts-section {
+  background: var(--mid-blue);
+  color: var(--light-gray);
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
 }
 
 .fact-container {
-  position: relative; /* For positioning the fade-out effect */
-  min-height: 100px; /* Ensure enough height for content */
-  max-width: 600px; /* Limit width for better readability */
-  margin: 0 auto; /* Center the container */
-  font-size: 1.2rem; /* Increased font size for readability */
-  font-style: italic; /* Italic style for fun effect */
-  transition: opacity 1s ease; /* Smooth fade transition */
+  background: rgba(0,0,0,0.3);
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.fade-out {
-  opacity: 0;
+/* ========== Footer ========== */
+footer {
+  background: var(--dark-blue);
+  text-align: center;
+  color: var(--light-gray);
+  padding: 1rem;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ========== Responsive Design ========== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-compact {
+    flex-direction: column;
+  }
+  .featured-aside {
+    max-width: 100%;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-compact h2 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #gallery {
+    padding: 1rem;
+  }
+
+  .sidebar {
+    padding: 1rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-button {
+    padding: 0.5rem 1rem;
+  }
 }

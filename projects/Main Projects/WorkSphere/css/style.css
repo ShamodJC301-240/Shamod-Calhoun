@@ -1,0 +1,129 @@
+/* ===== Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f4f4f4;
+  color: #1A3D64;
+  line-height: 1.6;
+}
+header {
+  text-align: center;
+  background: #0C2B4E;
+  color: #F4F4F4;
+  padding: 30px 20px;
+}
+header h1 {
+  margin-bottom: 10px;
+}
+header p {
+  font-size: 1.1rem;
+  color: #B7E5CD;
+}
+
+/* ===== Navigation ===== */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #1A3D64;
+  gap: 15px;
+  padding: 15px 0;
+}
+nav a {
+  color: #F4F4F4;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: 0.3s;
+  background: #305669;
+}
+nav a:hover {
+  background: #667eea;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ===== Sections ===== */
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+section h2 {
+  margin-bottom: 20px;
+  color: #0C2B4E;
+  font-size: 2rem;
+  border-bottom: 3px solid #1D546C;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* ===== Forms ===== */
+form input, form select, form button {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+form button {
+  background: #1D546C;
+  color: #F4F4F4;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+form button:hover {
+  background: #667eea;
+}
+
+/* ===== Tables ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table th, table td {
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+table th {
+  background: #1A3D64;
+  color: #F4F4F4;
+  font-weight: 600;
+}
+table tr:nth-child(even) {
+  background: #f4f4f4;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1A3D64;
+  color: #F4F4F4;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+  section {
+    margin: 20px 15px;
+    padding: 20px;
+  }
+  table th, table td {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}

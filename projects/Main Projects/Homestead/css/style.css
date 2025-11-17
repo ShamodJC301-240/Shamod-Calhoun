@@ -1,0 +1,130 @@
+:root {
+      --primary: #305669;
+      --secondary: #B7E5CD;
+      --accent: #F4F4F4;
+      --card-bg: #3F7A66;
+      --card-hover: #4E8F7A;
+    }
+
+    /* ===== Base ===== */
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: var(--primary);
+      color: var(--accent);
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== Header ===== */
+    header {
+      background-color: var(--secondary);
+      color: var(--primary);
+      padding: 1rem;
+      text-align: center;
+      border-radius: 8px;
+      margin: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      margin-top: 0.5rem;
+      padding: 0;
+      gap: 1rem;
+    }
+
+    nav ul li a {
+      font-weight: bold;
+      padding: 0.3rem 0.6rem;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: var(--primary);
+      color: var(--accent);
+    }
+
+    /* ===== Main & Sections ===== */
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      gap: 1rem;
+    }
+
+    section {
+      width: 100%;
+      max-width: 900px;
+      background-color: var(--card-bg);
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+
+    section:hover {
+      background-color: var(--card-hover);
+    }
+
+    section h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    section p {
+      margin-top: 0.5rem;
+      line-height: 1.5;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 1rem;
+      background-color: var(--secondary);
+      color: var(--primary);
+      border-radius: 8px;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      section {
+        padding: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      section h2 {
+        font-size: 1.2rem;
+      }
+    }

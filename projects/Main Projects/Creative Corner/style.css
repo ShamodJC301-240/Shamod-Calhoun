@@ -1,0 +1,176 @@
+/* ===========================
+   Creative Corner — Arts & Crafts
+   Color Palette:
+   #D97C50, #F4E8D4, #7C9A6D, #4B3832, #FFF9F2
+=========================== */
+
+/* ========== Base Styles ========== */
+:root {
+  --accent: #D97C50;
+  --background: #F4E8D4;
+  --secondary: #7C9A6D;
+  --text-dark: #4B3832;
+  --highlight: #FFF9F2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background: var(--background);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent);
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+/* ========== Layout ========== */
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: var(--accent);
+  color: var(--highlight);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p.tagline {
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+nav ul li a {
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ========== Sections ========== */
+main {
+  flex: 1;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+section {
+  background: var(--highlight);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+section .description {
+  color: #6b584f;
+  margin-bottom: 1rem;
+}
+
+/* ========== Projects ========== */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.project {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.project img {
+  width: 100%;
+  display: block;
+}
+
+.project h3 {
+  margin: 0.5rem 1rem;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.project p {
+  margin: 0 1rem 1rem;
+  font-size: 0.9rem;
+  color: #5a473f;
+}
+
+/* ========== Footer ========== */
+footer {
+  text-align: center;
+  background: var(--secondary);
+  color: var(--highlight);
+  padding: 1rem;
+  font-size: 0.85rem;
+}
+
+/* ========== Responsive Design ========== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .projects {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+  header p.tagline {
+    font-size: 0.95rem;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}

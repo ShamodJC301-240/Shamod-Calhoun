@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Employee Management System</h1>
+    <p>Manage your team's details, roles, and schedules efficiently</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#employee-list">Employee List</a>
+    <a href="#add-employee">Add Employee</a>
+    <a href="#assign-roles">Assign Roles</a>
+    <a href="#schedules">Schedules</a>
+  </nav>
+
+  <!-- Employee List Section -->
+  <section id="employee-list">
+    <h2>Current Employees</h2>
+    <!-- Step 1: Dynamic list of employees -->
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Role</th>
+          <th>Hire Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="employee-table-body">
+        <!-- Employees will be dynamically inserted here -->
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Add Employee Section -->
+  <section id="add-employee">
+    <h2>Add New Employee</h2>
+    <form id="add-employee-form">
+      <input type="text" id="employee-name" placeholder="Full Name" required>
+      <input type="email" id="employee-email" placeholder="Email Address" required>
+      <input type="date" id="hire-date" placeholder="Hire Date" required>
+      <input type="text" id="role" placeholder="Role / Position" required>
+      <button type="submit">Add Employee</button>
+    </form>
+  </section>
+
+  <!-- Assign Roles Section -->
+  <section id="assign-roles">
+    <h2>Assign / Update Roles</h2>
+    <form id="assign-role-form">
+      <select id="employee-select">
+        <!-- Dynamically populate employee names -->
+      </select>
+      <input type="text" id="new-role" placeholder="New Role" required>
+      <button type="submit">Update Role</button>
+    </form>
+  </section>
+
+  <!-- Schedules Section -->
+  <section id="schedules">
+    <h2>Manage Employee Schedules</h2>
+    <form id="schedule-form">
+      <select id="schedule-employee-select">
+        <!-- Dynamically populate employee names -->
+      </select>
+      <input type="date" id="schedule-date" required>
+      <input type="time" id="schedule-start" required>
+      <input type="time" id="schedule-end" required>
+      <button type="submit">Add Schedule</button>
+    </form>
+    <div id="schedule-list">
+      <!-- Dynamically show schedules here -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Employee Management System. All rights reserved.</p>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+  <!-- Step 1: script.js will handle dynamic employee list, role assignments, and schedules -->
+</body>
+</html>
+
+<!-- AI Upgrade Ideas:
+👥 Employee Performance Predictor:
+Use historical performance data to train a model that predicts future performance or identifies employees who may need additional support.
+🗓️ Schedule Optimization:
+Implement an AI module that suggests optimal shift schedules based on employee availability, workload, and productivity patterns.
+📊 Role Recommendation System:
+Use clustering or classification algorithms to recommend suitable roles for employees based on their skills, experience, and past performance.
+ML Concepts: predictive modeling, optimization algorithms, recommendation systems.-->

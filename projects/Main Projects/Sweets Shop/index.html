@@ -161,6 +161,7 @@
       <h3>Share Your Experience</h3>
       <form class="review-form" onsubmit="submitReview(event)">
         <input type="text" placeholder="Your Name" required> <!-- Tweak this -->
+        <label for="rating">Choose a rating</label>
         <select id="rating" required>
           <option value="">Rate your experience</option>
           <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
@@ -272,7 +273,8 @@
       <input type="tel" placeholder="Phone Number" required>
       <input type="date" placeholder="Event Date" required>
       <input type="number" placeholder="Number of Guests" required>
-      <select required>
+      <label for="event">Choose your event</label>
+      <select id="event" required>
         <option value="">Event Type</option>
         <option value="wedding">Wedding</option>
         <option value="birthday">Birthday Party</option>

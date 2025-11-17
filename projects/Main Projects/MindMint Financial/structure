@@ -1,0 +1,18 @@
+mindmint-financial/
+│
+├── index.html                 # Main landing page
+├── style.css                  # Main CSS file
+├── script.js                  # Main JS file for interactivity (calculator, buttons, etc.)
+│
+├── pages/                     # Optional: secondary pages if you expand
+│   ├── accounts.html
+│   ├── learn.html
+│   ├── tools.html
+│   └── login.html
+│
+├── assets/                    # Static assets
+│   ├── images/                # Icons, hero images, illustrations
+│   ├── fonts/                 # Any custom fonts
+│   └── pdfs/                  # Guides, worksheets, or downloadable content
+│
+└── README.md                  # Project overview (optional)

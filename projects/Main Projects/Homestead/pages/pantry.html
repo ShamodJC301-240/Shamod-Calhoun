@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pantry | Homestead Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🍯 Pantry & Storage</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="garden.html">Garden</a></li>
+        <li><a href="pantry.html" class="active">Pantry</a></li>
+        <li><a href="survival.html">Survival</a></li>
+        <li><a href="weather.html">Weather</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Pantry Overview</h2>
+      <p>Monitor food storage, shelf life, preservation methods, and restock alerts.</p>
+    </section>
+
+    <section>
+      <h2>Inventory</h2>
+      <!-- TODO: Add table: Food, Qty, Expiration -->
+    </section>
+
+    <section>
+      <h2>Restock Alerts</h2>
+      <!-- TODO: Low quantity notifications -->
+    </section>
+
+    <section>
+  <h2>Grocery List</h2>
+  <p>Plan your shopping and keep track of items you need to buy.</p>
+
+  <!-- Form to add grocery items -->
+  <form id="groceryForm">
+    <input type="text" id="itemName" placeholder="Enter grocery item" required>
+    <input type="number" id="itemQty" placeholder="Quantity" min="1">
+    <select id="category">
+      <option value="produce">Produce</option>
+      <option value="dairy">Dairy</option>
+      <option value="meat">Meat</option>
+      <option value="pantry">Pantry</option>
+      <option value="other">Other</option>
+    </select>
+    <button type="submit">Add Item</button>
+  </form>
+
+  <!-- Container for grocery items -->
+  <section id="groceryListContainer">
+    <!-- Grocery items will appear here dynamically -->
+  </section>
+</section>
+
+
+    <section>
+      <h2>Preserving</h2>
+      <!-- TODO: Freezer, canned goods, dehydrated storage -->
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Homestead Management App | Pantry Module</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+card-deck-project/
+├─ README.md
+├─ LICENSE
+├─ .gitignore
+├─ requirements.txt
+├─ run_cli.py
+├─ run_gui.py
+├─ run_api.py
+├─ src/
+│  └─ cards/
+│     ├─ __init__.py
+│     ├─ card.py
+│     ├─ deck.py
+│     └─ game.py
+├─ tests/
+│  └─ test_deck.py
+└─ logs/
+   └─ game.log         (created at runtime)

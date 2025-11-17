@@ -1,0 +1,16 @@
+employee-management/
+│
+├── index.html              → Dashboard
+├── employees.html          → Employee directory
+├── attendance.html         → Track hours, status
+├── payroll.html            → Simple salary/bonus tracking
+│
+├── css/
+│   └── style.css
+├── js/
+│   ├── main.js
+│   ├── employees.js
+│   ├── attendance.js
+│   └── payroll.js
+└── data/
+    └── employees.json
